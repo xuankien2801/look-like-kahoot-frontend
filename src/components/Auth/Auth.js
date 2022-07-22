@@ -66,10 +66,10 @@ function Auth() {
         <Typography component="h1" variant="h5">
           {isSignup
             ? isLanguageEnglish
-              ? "Sign up"
+              ? "Register"
               : "Tạo tài khoản"
             : isLanguageEnglish
-            ? "Sign in"
+            ? "Login"
             : "Đăng nhập"}
         </Typography>
         <form className={classes.form} onSubmit={handleSubmit}>
@@ -95,7 +95,7 @@ function Auth() {
                   handleChange={handleChange}
                 />
                 <Input
-                  name="mail"
+                  name="email"
                   label={isLanguageEnglish ? "Email address" : "Email"}
                   handleChange={handleChange}
                   type="email"
@@ -115,14 +115,7 @@ function Auth() {
               type={showPassword ? "text" : "password"}
               handleShowPassword={handleShowPassword}
             />
-            {isSignup && (
-              <Input
-                name="confirmPassword"
-                label={isLanguageEnglish ? "Repeat password" : "Nhập lại mật khẩu"}
-                handleChange={handleChange}
-                type="password"
-              />
-            )}
+            
           </Grid>
           <Button
             type="submit"
@@ -133,10 +126,10 @@ function Auth() {
           >
             {isSignup
               ? isLanguageEnglish
-                ? "Sign up"
+                ? "Register"
                 : "Đăng ký"
               : isLanguageEnglish
-              ? "Sign in"
+              ? "Login"
               : "Đăng nhập"}
           </Button>
           <Grid container justify="flex-end">
@@ -144,10 +137,10 @@ function Auth() {
               <Button onClick={switchMode}>
                 {isSignup
                   ? isLanguageEnglish
-                    ? "Already have an account? Sign in"
+                    ? "Already have an account? Login"
                     : "Đã có tài khoản? Đăng nhập"
                   : isLanguageEnglish
-                  ? "Don't have an account? Sign Up"
+                  ? "Don't have an account? Register"
                   : "Chưa có tài khoản? Tạo ngay"}
               </Button>
             </Grid>

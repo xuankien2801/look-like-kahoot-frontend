@@ -3,7 +3,7 @@ import Quiz from "./Quiz/Quiz"
 import { useDispatch, useSelector } from "react-redux"
 import { useHistory, useLocation } from "react-router-dom"
 import styles from "./quizes.module.css"
-import ChipInput from "material-ui-chip-input"
+//import ChipInput from "material-ui-chip-input"
 import {
   AppBar,
   TextField,
